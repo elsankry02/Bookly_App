@@ -13,4 +13,4 @@ Bookly is a beautifully designed Flutter app for book lovers who want to track, 
   - **MVVM:** The app follows the MVVM (Model-View-ViewModel) design pattern for code organization.
   - **bloc:** Utilizes Cubit for effective state management.
   - **GoRouter:** Strong and type-safe navigation with clean routing structure.
-  - - **get_it:** – Dependency injection for service and controller access.
+  - **get_it:** – Dependency injection for service and controller access.
