@@ -1,7 +1,8 @@
-import '../../Features/search_page/data/manger/get_fetch_search_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../data/manger/get_fetch_search_books_cubit.dart';
 
 class CustomSearchTextField extends StatelessWidget {
   const CustomSearchTextField({super.key});
@@ -9,6 +10,7 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: Colors.white,
       onSubmitted: (data) {
         BlocProvider.of<FetchSearchBookCubit>(
           context,

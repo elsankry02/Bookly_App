@@ -25,7 +25,7 @@ class SimilarBookListView extends StatelessWidget {
                   child: CustomBookImage(
                     imageUrl:
                         state.books[index].volumeInfo.imageLinks?.thumbnail ??
-                        "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXcDlHNozqv7pTHrrHPQxnpzr11SHatJoolvMV0IHZxEgfEu3I",
+                        '',
                   ),
                 );
               },

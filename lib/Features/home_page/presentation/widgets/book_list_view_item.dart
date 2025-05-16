@@ -20,7 +20,7 @@ class BookListViewItem extends StatelessWidget {
         ).pushReplacement(AppRouter.kDetailseView, extra: bookModel);
       },
       child: SizedBox(
-        height: 125,
+        height: 120,
         child: Row(
           children: [
             CustomBookImage(
@@ -36,13 +36,13 @@ class BookListViewItem extends StatelessWidget {
                     style: Styles.textStyle20.copyWith(
                       fontFamily: kGtSectraFine,
                     ),
-                    maxLines: 1,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 13),
+                  const SizedBox(height: 3),
                   Text(
                     bookModel.volumeInfo.authors?[0] ??
-                        bookModel.volumeInfo.authors![1],
+                        bookModel.volumeInfo.authors![5],
                     style: Styles.textStyle14,
                   ),
                   const SizedBox(height: 3),
