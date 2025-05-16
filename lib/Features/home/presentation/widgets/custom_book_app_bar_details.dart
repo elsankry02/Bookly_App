@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/Function/custom_navigate.dart';
+import '../../../../core/Function/custom_navigate.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/routes/app_routes.dart';

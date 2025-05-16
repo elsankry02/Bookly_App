@@ -1,6 +1,6 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:bookly_app/Features/search/data/repos/search_repos.dart';
-import 'package:bookly_app/core/utils/api_service.dart';
+import '../../../home/data/models/book_model/book_model.dart';
+import 'search_repos.dart';
+import '../../../../core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 

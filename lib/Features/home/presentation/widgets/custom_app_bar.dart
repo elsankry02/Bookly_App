@@ -1,5 +1,5 @@
-import 'package:bookly_app/core/Function/custom_navigate.dart';
-import 'package:bookly_app/core/routes/app_routes.dart';
+import '../../../../core/Function/custom_navigate.dart';
+import '../../../../core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

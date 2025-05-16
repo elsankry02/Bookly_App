@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/Function/custom_snack_bar.dart';
+import 'custom_snack_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> customUrlLaunch(context, String? url) async {

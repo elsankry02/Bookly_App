@@ -1,13 +1,13 @@
-import 'package:bookly_app/Features/home/data/models/book_model/book_model.dart';
-import 'package:bookly_app/Features/home/data/repos/home_repo_imp.dart';
-import 'package:bookly_app/Features/home/presentation/manger/similar_books_cubit/get_fetch_similar_books_cubit.dart';
-import 'package:bookly_app/Features/home/presentation/views/book_details_view.dart';
-import 'package:bookly_app/Features/home/presentation/views/home_views.dart';
-import 'package:bookly_app/Features/search/data/repos/search_repos_impl.dart';
-import 'package:bookly_app/Features/search/presentation/manger/get_fetch_search_books_cubit.dart';
-import 'package:bookly_app/Features/search/presentation/views/search_views.dart';
-import 'package:bookly_app/Features/splash/presentation/views/splash_view.dart';
-import 'package:bookly_app/core/services/services_locator.dart';
+import '../../Features/home/data/models/book_model/book_model.dart';
+import '../../Features/home/data/repos/home_repo_imp.dart';
+import '../../Features/home/presentation/manger/similar_books_cubit/get_fetch_similar_books_cubit.dart';
+import '../../Features/home/presentation/views/book_details_view.dart';
+import '../../Features/home/presentation/views/home_views.dart';
+import '../../Features/search/data/repos/search_repos_impl.dart';
+import '../../Features/search/presentation/manger/get_fetch_search_books_cubit.dart';
+import '../../Features/search/presentation/views/search_views.dart';
+import '../../Features/splash/presentation/views/splash_view.dart';
+import '../services/services_locator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

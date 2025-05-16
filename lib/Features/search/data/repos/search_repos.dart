@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/errora/failures.dart';
+import '../../../../core/errora/failures.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../../home/data/models/book_model/book_model.dart';
