@@ -1,6 +1,5 @@
+import 'package:bookly_app/core/utils/string_manger.dart';
 import 'package:flutter/material.dart';
-
-import '../../constant.dart';
 
 class StyleManger {
   static const textStyle14 = TextStyle(
@@ -22,16 +21,16 @@ class StyleManger {
   static const textStyle22 = TextStyle(
     fontSize: 22,
     fontWeight: FontWeight.w500,
-    fontFamily: kGtSectraFine,
+    fontFamily: StringManger.kGtSectraFine,
   );
   static const textStyle25 = TextStyle(
     fontSize: 25,
     fontWeight: FontWeight.w900,
-    fontFamily: kGtSectraFine,
+    fontFamily: StringManger.kGtSectraFine,
   );
   static const textStyle30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.w900,
-    fontFamily: kGtSectraFine,
+    fontFamily: StringManger.kGtSectraFine,
   );
 }

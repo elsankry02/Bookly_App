@@ -1,7 +1,7 @@
+import 'package:bookly_app/core/utils/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../constant.dart';
 import '../../../../core/components/custom_book_image.dart';
 import '../../../../core/routes/app_routes.dart';
 import '../../../../core/utils/style_manger.dart';
@@ -33,7 +33,7 @@ class BookListViewItem extends StatelessWidget {
                   Text(
                     bookModel.volumeInfo.title ?? 'No Title',
                     style: StyleManger.textStyle20.copyWith(
-                      fontFamily: kGtSectraFine,
+                      fontFamily: StringManger.kGtSectraFine,
                     ),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
