@@ -1,9 +1,9 @@
-import 'slide_text.dart';
-import '../../../core/Function/custom_navigate.dart';
-import '../../../core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/utils/app_assets.dart';
+import '../../../core/Function/custom_navigate.dart';
+import '../../../core/routes/app_routes.dart';
+import '../../../core/utils/image_manger.dart';
+import 'slide_text.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -35,7 +35,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Image.asset(AppAssets.kLogo),
+        Image.asset(ImageManger.kBooklyLogo),
         const SizedBox(height: 4),
         SlideText(slidingAnimation: slidingAnimation),
       ],

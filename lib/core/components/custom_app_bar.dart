@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../Function/custom_navigate.dart';
 import '../routes/app_routes.dart';
-import '../utils/app_assets.dart';
+import '../utils/image_manger.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});
@@ -14,7 +14,7 @@ class CustomAppBar extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 20),
       child: Row(
         children: [
-          Image.asset(AppAssets.kLogo, height: 20),
+          Image.asset(ImageManger.kBooklyLogo, height: 20),
           const Spacer(),
           IconButton(
             onPressed: () {
