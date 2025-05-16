@@ -1,8 +1,8 @@
-import 'similar_book_list_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/app_styles.dart';
+import '../../../../core/utils/string_manger.dart';
+import '../../../../core/utils/style_manger.dart';
+import 'similar_book_list_view.dart';
 
 class SimilarBooksSection extends StatelessWidget {
   const SimilarBooksSection({super.key});
@@ -13,8 +13,8 @@ class SimilarBooksSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          AppStrings.bookDetails,
-          style: Styles.textStyle14.copyWith(fontWeight: FontWeight.w600),
+          StringManger.kBookDetails,
+          style: StyleManger.textStyle14.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 16),
         const SimilarBookListView(),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_styles.dart';
+import '../../../../core/components/custom_book_image.dart';
+import '../../../../core/utils/style_manger.dart';
 import '../../data/models/book_model/book_model.dart';
 import 'book_rating.dart';
 import 'books_action.dart';
-import '../../../../core/components/custom_book_image.dart';
 
 class BooksDetailsSection extends StatelessWidget {
   const BooksDetailsSection({super.key, required this.bookModel});
@@ -26,7 +26,7 @@ class BooksDetailsSection extends StatelessWidget {
         Text(
           bookModel.volumeInfo.title!,
           textAlign: TextAlign.center,
-          style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+          style: StyleManger.textStyle30.copyWith(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 6),
         Opacity(
@@ -35,7 +35,7 @@ class BooksDetailsSection extends StatelessWidget {
             textAlign: TextAlign.center,
             bookModel.volumeInfo.authors?[0] ??
                 bookModel.volumeInfo.authors![1],
-            style: Styles.textStyle18.copyWith(
+            style: StyleManger.textStyle18.copyWith(
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w500,
             ),

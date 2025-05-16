@@ -13,9 +13,10 @@ class CustomAppBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 20),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(ImageManger.kBooklyLogo, height: 20),
-          const Spacer(),
+          Image.asset(ImageManger.kBooklyLogo, height: 24),
+
           IconButton(
             onPressed: () {
               customPushReplacement(context, path: AppRouter.kSearchView);

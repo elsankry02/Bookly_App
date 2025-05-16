@@ -1,10 +1,10 @@
-import '../../../home_page/data/models/book_model/book_model.dart';
-import 'search_repos.dart';
-import '../../../../core/utils/api_service.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 import '../../../../core/error/failures.dart';
+import '../../../../core/utils/api_service.dart';
+import '../../../home_page/data/models/book_model/book_model.dart';
+import 'search_repos.dart';
 
 class SearchRepoImpl implements SearchRepo {
   final ApiService apiService;
@@ -13,11 +13,11 @@ class SearchRepoImpl implements SearchRepo {
 
   @override
   Future<Either<Failure, List<BookModel>>> fetchSearchBooks({
-    required String category,
+    required String endPoint,
   }) async {
     try {
       var data = await apiService.get(
-        endPoint: "volumes?Filtering=free-ebooks&q=$category",
+        endPoint: "volumes?Filtering=free-ebooks&q=$endPoint",
       );
       List<BookModel> books = [];
       for (var item in data["items"]) {

@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/components/custom_app_bar.dart';
-import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/app_styles.dart';
+import '../../../../core/utils/string_manger.dart';
+import '../../../../core/utils/style_manger.dart';
 import '../widgets/best_seller_list_view.dart';
 import '../widgets/featured_books_list_view.dart';
 
@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 //! Custom AppBar
                 child: CustomAppBar(),
               ),
@@ -31,7 +31,10 @@ class HomeViewBody extends StatelessWidget {
               //
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Text(AppStrings.newestBooks, style: Styles.textStyle30),
+                child: Text(
+                  StringManger.kNewestBooks,
+                  style: StyleManger.textStyle30,
+                ),
               ),
               SizedBox(height: 20),
             ],

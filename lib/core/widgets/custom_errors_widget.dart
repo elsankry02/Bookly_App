@@ -1,5 +1,6 @@
-import '../utils/app_styles.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/style_manger.dart';
 
 class CustomErrorWidget extends StatelessWidget {
   const CustomErrorWidget({super.key, required this.errMessage});
@@ -9,7 +10,7 @@ class CustomErrorWidget extends StatelessWidget {
     return Center(
       child: Text(
         errMessage,
-        style: Styles.textStyle18,
+        style: StyleManger.textStyle18,
         textAlign: TextAlign.center,
       ),
     );

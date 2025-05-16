@@ -11,10 +11,10 @@ class CustomSearchTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       cursorColor: Colors.white,
-      onSubmitted: (data) {
+      onSubmitted: (value) {
         BlocProvider.of<FetchSearchBookCubit>(
           context,
-        ).getFetchSimilarBooksCubit(category: data);
+        ).getFetchSimilarBooksCubit(endPoint: value);
       },
       decoration: InputDecoration(
         focusedBorder: buildOutlineInputBroder(),
@@ -22,10 +22,7 @@ class CustomSearchTextField extends StatelessWidget {
         hintText: "Search",
         suffixIcon: IconButton(
           onPressed: () {},
-          icon: const Opacity(
-            opacity: 0.8,
-            child: FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22),
-          ),
+          icon: FaIcon(FontAwesomeIcons.magnifyingGlass, size: 22),
         ),
       ),
     );
@@ -33,8 +30,8 @@ class CustomSearchTextField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBroder() {
     return OutlineInputBorder(
+      borderSide: BorderSide(width: 1, color: Colors.white38),
       borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(color: Colors.white),
     );
   }
 }

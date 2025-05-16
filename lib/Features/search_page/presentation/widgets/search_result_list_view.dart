@@ -1,7 +1,8 @@
+import 'package:bookly_app/core/utils/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/app_styles.dart';
+import '../../../../core/utils/style_manger.dart';
 import '../../../../core/widgets/custom_errors_widget.dart';
 import '../../../../core/widgets/custom_loading_indicator.dart';
 import '../../../home_page/presentation/widgets/book_list_view_item.dart';
@@ -21,7 +22,7 @@ class SearchResultListView extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
-                child: BookListViewItem(bookModel: state.bookModel[index] ),
+                child: BookListViewItem(bookModel: state.bookModel[index]),
               );
             },
           );
@@ -32,8 +33,8 @@ class SearchResultListView extends StatelessWidget {
         } else {
           return const Center(
             child: Text(
-              "search for any book",
-              style: Styles.textStyle30,
+              StringManger.kStartSearchingForourBook,
+              style: StyleManger.textStyle25,
               textAlign: TextAlign.center,
             ),
           );

@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../constant.dart';
 import '../../../../core/components/custom_book_image.dart';
 import '../../../../core/routes/app_routes.dart';
-import '../../../../core/utils/app_styles.dart';
+import '../../../../core/utils/style_manger.dart';
 import '../../data/models/book_model/book_model.dart';
 import 'book_rating.dart';
 
@@ -33,7 +33,7 @@ class BookListViewItem extends StatelessWidget {
                 children: [
                   Text(
                     bookModel.volumeInfo.title!,
-                    style: Styles.textStyle20.copyWith(
+                    style: StyleManger.textStyle20.copyWith(
                       fontFamily: kGtSectraFine,
                     ),
                     maxLines: 2,
@@ -43,7 +43,7 @@ class BookListViewItem extends StatelessWidget {
                   Text(
                     bookModel.volumeInfo.authors?[0] ??
                         bookModel.volumeInfo.authors![5],
-                    style: Styles.textStyle14,
+                    style: StyleManger.textStyle14,
                   ),
                   const SizedBox(height: 3),
                   Expanded(
@@ -51,7 +51,7 @@ class BookListViewItem extends StatelessWidget {
                       children: [
                         Text(
                           'Free',
-                          style: Styles.textStyle20.copyWith(
+                          style: StyleManger.textStyle20.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
