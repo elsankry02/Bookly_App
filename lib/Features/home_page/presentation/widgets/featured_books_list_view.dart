@@ -27,7 +27,7 @@ class FeaturedBooksListView extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
                   child: InkWell(
                     onTap: () {
-                      GoRouter.of(context).pushReplacement(
+                      GoRouter.of(context).push(
                         AppRouter.kDetailseView,
                         extra: state.books[index],
                       );

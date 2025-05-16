@@ -15,16 +15,15 @@ class BookListViewItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(
-          context,
-        ).pushReplacement(AppRouter.kDetailseView, extra: bookModel);
+        GoRouter.of(context).push(AppRouter.kDetailseView, extra: bookModel);
       },
       child: SizedBox(
         height: 120,
         child: Row(
           children: [
             CustomBookImage(
-              imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? "",
+              imageUrl:
+                  bookModel.volumeInfo.imageLinks?.thumbnail ?? "Unknown Image",
             ),
             const SizedBox(width: 30),
             Expanded(
@@ -32,7 +31,7 @@ class BookListViewItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    bookModel.volumeInfo.title!,
+                    bookModel.volumeInfo.title ?? 'No Title',
                     style: StyleManger.textStyle20.copyWith(
                       fontFamily: kGtSectraFine,
                     ),
@@ -41,8 +40,10 @@ class BookListViewItem extends StatelessWidget {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    bookModel.volumeInfo.authors?[0] ??
-                        bookModel.volumeInfo.authors![5],
+                    (bookModel.volumeInfo.authors != null &&
+                            bookModel.volumeInfo.authors!.isNotEmpty)
+                        ? bookModel.volumeInfo.authors!.first
+                        : 'Unknown Author',
                     style: StyleManger.textStyle14,
                   ),
                   const SizedBox(height: 3),
