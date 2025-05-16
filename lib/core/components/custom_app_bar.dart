@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
-import '../Function/custom_navigate.dart';
 import '../routes/app_routes.dart';
 import '../utils/image_manger.dart';
 
@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
 
           IconButton(
             onPressed: () {
-              customPushReplacement(context, path: AppRouter.kSearchView);
+              GoRouter.of(context).push(AppRouter.kSearchView);
             },
             icon: const FaIcon(FontAwesomeIcons.magnifyingGlass),
           ),

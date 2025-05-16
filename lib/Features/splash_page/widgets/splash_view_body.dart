@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../core/Function/custom_navigate.dart';
 import '../../../core/routes/app_routes.dart';
 import '../../../core/utils/image_manger.dart';
 import 'slide_text.dart';
@@ -57,7 +57,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 2), () {
-      customPushReplacement(context, path: AppRouter.kHomeView);
+      GoRouter.of(context).pushReplacement(AppRouter.kHomeView);
     });
   }
 }

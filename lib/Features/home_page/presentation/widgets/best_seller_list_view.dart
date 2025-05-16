@@ -16,6 +16,7 @@ class BestSellerListView extends StatelessWidget {
       builder: (context, state) {
         if (state is NewestBooksSuceess) {
           return ListView.builder(
+            shrinkWrap: true, // علشان تأخذ فقط المساحة المطلوبة
             padding: EdgeInsets.zero,
             physics: const NeverScrollableScrollPhysics(),
             itemCount: state.books.length,
