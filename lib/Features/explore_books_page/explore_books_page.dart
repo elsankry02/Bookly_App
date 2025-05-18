@@ -1,16 +1,11 @@
+import 'package:bookly_app/Features/explore_books_page/widget/builder_library_widget.dart';
 import 'package:bookly_app/bloc/similar_books_cubit/similar_books_cubit.dart';
-import 'package:bookly_app/components/custom_book_image.dart';
-import 'package:bookly_app/components/custom_errors_widget.dart';
-import 'package:bookly_app/components/custom_loading_indicator.dart';
 import 'package:bookly_app/constant/color_manger.dart';
-import 'package:bookly_app/constant/string_manger.dart';
 import 'package:bookly_app/constant/style_manger.dart';
-import 'package:bookly_app/core/routes/app_routes.dart';
 import 'package:bookly_app/repos/repo_imp.dart';
 import 'package:bookly_app/services/services_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
 
 class ExploreBooksPage extends StatefulWidget {
   const ExploreBooksPage({super.key});
@@ -36,6 +31,7 @@ class _ExploreBooksPageState extends State<ExploreBooksPage> {
                   ..getFetchSimilarBooksCubit(category: items[0]),
         child: Column(
           children: [
+            SizedBox(height: 10),
             SizedBox(
               height: 35,
               child: ListView.builder(
@@ -65,8 +61,8 @@ class _ExploreBooksPageState extends State<ExploreBooksPage> {
                       decoration: BoxDecoration(
                         color:
                             currantIndex == index
-                                ? ColorManger.kPrimaryColor
-                                : ColorManger.kSecond,
+                                ? ColorManger.kExploreBooks
+                                : ColorManger.kWhite,
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Center(
@@ -78,7 +74,7 @@ class _ExploreBooksPageState extends State<ExploreBooksPage> {
                             color:
                                 currantIndex == index
                                     ? ColorManger.kWhite
-                                    : ColorManger.kPrimaryColor,
+                                    : ColorManger.kFree,
                           ),
                         ),
                       ),
@@ -87,115 +83,8 @@ class _ExploreBooksPageState extends State<ExploreBooksPage> {
                 },
               ),
             ),
-
-            Expanded(
-              child: BlocBuilder<SimilarBooksCubit, SimilarBooksState>(
-                builder: (context, state) {
-                  if (state is GetFetchSimilarBooksSuccess) {
-                    final books = state.books;
-                    return ListView.builder(
-                      padding: EdgeInsets.only(left: 10, right: 10, top: 20),
-                      itemCount: books.length,
-                      itemBuilder: (context, index) {
-                        final book = books[index];
-
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 12),
-                          child: GestureDetector(
-                            onTap: () {
-                              GoRouter.of(
-                                context,
-                              ).push(AppRouter.kDetailseView, extra: book);
-                            },
-                            child: SizedBox(
-                              height: 120,
-                              child: Row(
-                                children: [
-                                  //! image
-                                  CustomBookImage(
-                                    imageUrl:
-                                        book.volumeInfo.imageLinks?.thumbnail ??
-                                        "Unknown Image",
-                                  ),
-                                  const SizedBox(width: 15),
-                                  Expanded(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        //! titel
-                                        Text(
-                                          book.volumeInfo.title ?? 'No Title',
-                                          style: StyleManger.textStyle20
-                                              .copyWith(
-                                                fontFamily:
-                                                    StringManger.kGtSectraFine,
-                                              ),
-                                          maxLines: 2,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        const SizedBox(height: 3),
-                                        //! subTitel
-                                        Text(
-                                          (book.volumeInfo.authors != null &&
-                                                  book
-                                                      .volumeInfo
-                                                      .authors!
-                                                      .isNotEmpty)
-                                              ? book.volumeInfo.authors!.first
-                                              : 'Unknown Author',
-                                          maxLines: 2,
-                                          style: StyleManger.textStyle14,
-                                        ),
-                                        const SizedBox(height: 3),
-                                        Expanded(
-                                          child: Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Text(
-                                                'Free',
-                                                style: StyleManger.textStyle14
-                                                    .copyWith(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                    ),
-                                              ),
-                                              Row(
-                                                children: [
-                                                  Icon(
-                                                    Icons.star,
-                                                    color: ColorManger.kStar,
-                                                    size: 16,
-                                                  ),
-                                                  Text(
-                                                    '${book.volumeInfo.averageRating ?? 0} (${book.volumeInfo.ratingsCount ?? 0})',
-                                                    style:
-                                                        StyleManger.textStyle14,
-                                                  ),
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        );
-                      },
-                    );
-                  } else if (state is GetFetchSimilarBooksFailure) {
-                    return CustomErrorWidget(errMessage: state.errMessage);
-                  } else {
-                    return const CustomLoadingIndicator();
-                  }
-                },
-              ),
-            ),
+            //! Builder Explore Widget
+            BuilderExploreWidget(),
           ],
         ),
       ),

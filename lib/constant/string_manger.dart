@@ -7,5 +7,6 @@ abstract class StringManger {
   static const kViewAll = 'View All';
   static const krating = "rating";
   static const kpages = "pages";
+  static const kCount = 'Count';
   static const kFree = 'Free';
 }

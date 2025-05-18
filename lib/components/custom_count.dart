@@ -7,8 +7,8 @@ class CustomCount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      "($count)",
-      style: StyleManger.textStyle14.copyWith(fontWeight: FontWeight.w600),
+      "$count",
+      style: StyleManger.textStyle16.copyWith(fontWeight: FontWeight.w600),
     );
   }
 }
