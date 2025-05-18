@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'Features/home_page/data/manger/featured_books_cubit/featured_books_cubit.dart';
-import 'Features/home_page/data/manger/newest_books_cubit/newest_books_cubit.dart';
-import 'Features/home_page/data/repos/home_repo_imp.dart';
+import 'bloc/featured_books_cubit/featured_books_cubit.dart';
+import 'bloc/newest_books_cubit/newest_books_cubit.dart';
 import 'core/routes/app_routes.dart';
+import 'repos/repo_imp.dart';
 import 'services/services_locator.dart';
 
 class BooklyApp extends StatelessWidget {
@@ -19,14 +19,13 @@ class BooklyApp extends StatelessWidget {
         BlocProvider(
           create:
               (context) =>
-                  FeaturedBooksCubit(getIt.get<HomeRepoImp>())
+                  FeaturedBooksCubit(getIt.get<RepoImp>())
                     ..getFetchFeaturedBooks(),
         ),
         BlocProvider(
           create:
               (context) =>
-                  NewsetBooksCubit(getIt.get<HomeRepoImp>())
-                    ..getFetchNewsetBooks(),
+                  NewsetBooksCubit(getIt.get<RepoImp>())..getFetchNewsetBooks(),
         ),
       ],
       child: MaterialApp.router(

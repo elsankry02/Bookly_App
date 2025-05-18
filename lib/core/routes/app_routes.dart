@@ -1,16 +1,15 @@
-import 'package:bookly_app/Features/view_all_newset_page/view_all_newset_books.dart';
+import 'package:bookly_app/Features/explore_books_page/explore_books_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../Features/home_page/data/manger/similar_books_cubit/similar_books_cubit.dart';
-import '../../Features/home_page/data/models/book_model/book_model.dart';
-import '../../Features/home_page/data/repos/home_repo_imp.dart';
-import '../../Features/home_page/presentation/views/home_views.dart';
-import '../../Features/home_page/presentation/widgets/book_details_view.dart';
-import '../../Features/search_page/data/manger/get_fetch_search_books_cubit.dart';
-import '../../Features/search_page/data/repos/search_repos_impl.dart';
-import '../../Features/search_page/presentation/views/search_views.dart';
+import '../../Features/book_details_page/book_details_view.dart';
+import '../../Features/home_page/views/home_views.dart';
+import '../../Features/search_page/views/search_views.dart';
 import '../../Features/splash_page/views/splash_view.dart';
+import '../../bloc/fetch_search_books_cubit/fetch_search_books_cubit.dart';
+import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
+import '../../models/book_model/book_model.dart';
+import '../../repos/repo_imp.dart';
 import '../../services/services_locator.dart';
 
 abstract class AppRouter {
@@ -27,15 +26,15 @@ abstract class AppRouter {
         path: kViewAllNewestBooks,
         builder:
             (context, state) => BlocProvider(
-              create: (context) => SimilarBooksCubit(getIt.get<HomeRepoImp>()),
-              child: ViewAllNewestBooks(),
+              create: (context) => SimilarBooksCubit(getIt.get<RepoImp>()),
+              child: ExploreBooksPage(),
             ),
       ),
       GoRoute(
         path: kDetailseView,
         builder:
             (context, state) => BlocProvider(
-              create: (context) => SimilarBooksCubit(getIt.get<HomeRepoImp>()),
+              create: (context) => SimilarBooksCubit(getIt.get<RepoImp>()),
               child: BookDetailsView(bookModel: state.extra as BookModel),
             ),
       ),
@@ -43,9 +42,7 @@ abstract class AppRouter {
         path: kSearchView,
         builder:
             (context, state) => BlocProvider(
-              create:
-                  (context) =>
-                      FetchSearchBookCubit(getIt.get<SearchRepoImpl>()),
+              create: (context) => FetchSearchBookCubit(getIt.get<RepoImp>()),
               child: const SearchViews(),
             ),
       ),
