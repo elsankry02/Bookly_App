@@ -28,14 +28,15 @@ class HomeViewBody extends StatelessWidget {
               ),
               //! Featured Books List View
               FeaturedBooksListView(),
-              //
+
               SizedBox(height: 30),
-              //
+
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    //! Newest Books
                     Text(
                       StringManger.kNewestBooks,
                       style: StyleManger.textStyle30,
@@ -47,12 +48,15 @@ class HomeViewBody extends StatelessWidget {
                           context,
                         ).push(AppRouter.kViewAllNewestBooks);
                       },
+                      //! View All
                       child: Text(
                         'View All',
                         textDirection: TextDirection.rtl,
 
-                        style: StyleManger.textStyle15.copyWith(
+                        style: StyleManger.textStyle16.copyWith(
                           decoration: TextDecoration.underline,
+
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),

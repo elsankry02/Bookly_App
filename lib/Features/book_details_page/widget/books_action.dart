@@ -27,7 +27,7 @@ class BooksAction extends StatelessWidget {
             borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(25),
             ),
-            textColor: ColorManger.kBurntSienna,
+            textColor: ColorManger.kFree,
             fontSize: 20,
           ),
         ),
@@ -39,7 +39,7 @@ class BooksAction extends StatelessWidget {
               openInChrome(context, "${bookModel.volumeInfo.previewLink}");
             },
             text: getText(bookModel),
-            backgroundColor: const Color(0xffEF8262),
+            backgroundColor: ColorManger.kPreview,
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(25),
             ),

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../bloc/newest_books_cubit/newest_books_cubit.dart';
 import '../../../components/custom_errors_widget.dart';
 import '../../../components/custom_loading_indicator.dart';
-import '../../../bloc/newest_books_cubit/newest_books_cubit.dart';
-import 'book_list_view_item.dart';
+import '../../newest_book_page/newest_book_page.dart';
 
 class BestSellerListView extends StatelessWidget {
   const BestSellerListView({super.key});
@@ -23,7 +23,7 @@ class BestSellerListView extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
-                child: BookListViewItem(bookModel: state.books[index]),
+                child: NewestBookPage(bookModel: state.books[index]),
               );
             },
           );

@@ -1,10 +1,10 @@
+import 'package:bookly_app/constant/color_manger.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/custom_book_image.dart';
 import '../../../constant/style_manger.dart';
 import '../../../models/book_model/book_model.dart';
-import '../../home_page/widgets/book_rating.dart';
-import '../../home_page/widgets/books_action.dart';
+import 'books_action.dart';
 
 class BooksDetailsSection extends StatelessWidget {
   const BooksDetailsSection({super.key, required this.bookModel});
@@ -21,7 +21,8 @@ class BooksDetailsSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 36),
-        //
+
+        //! Book Details Titel
         Text(
           bookModel.volumeInfo.title!,
           textAlign: TextAlign.center,
@@ -32,24 +33,53 @@ class BooksDetailsSection extends StatelessWidget {
         //
         Opacity(
           opacity: .7,
+          //! Book Details subTitel
           child: Text(
             textAlign: TextAlign.center,
             bookModel.volumeInfo.authors?[0] ??
                 bookModel.volumeInfo.authors![1],
-            style: StyleManger.textStyle18.copyWith(
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.w500,
-            ),
+            style: StyleManger.textStyle18.copyWith(color: ColorManger.kSecond),
           ),
         ),
-        //
-        const SizedBox(height: 18),
-        //
-        BookRating(
-          count: bookModel.volumeInfo.ratingsCount ?? 0,
-          rating: bookModel.volumeInfo.averageRating?.round() ?? 0,
-          mainAxisAlignment: MainAxisAlignment.center,
+        const SizedBox(height: 20),
+
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                Text(
+                  " ${bookModel.volumeInfo.pageCount}",
+
+                  style: StyleManger.textStyle18.copyWith(
+                    color: ColorManger.kWhite,
+                  ),
+                ),
+                Text(
+                  'Pages',
+                  textAlign: TextAlign.center,
+                  style: StyleManger.textStyle16.copyWith(
+                    color: ColorManger.kSecond,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              width: 1.5,
+              height: 40,
+              color: ColorManger.kSecond,
+              margin: const EdgeInsets.symmetric(horizontal: 12),
+            ),
+            Opacity(
+              opacity: .5,
+              child: Text(
+                " ${bookModel.volumeInfo.pageCount}",
+                style: StyleManger.textStyle18.copyWith(),
+              ),
+            ),
+          ],
         ),
+
         const SizedBox(height: 37),
         BooksAction(bookModel: bookModel),
       ],

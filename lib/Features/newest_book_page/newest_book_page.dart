@@ -2,14 +2,14 @@ import 'package:bookly_app/constant/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../components/custom_book_image.dart';
-import '../../../core/routes/app_routes.dart';
-import '../../../constant/style_manger.dart';
-import '../../../models/book_model/book_model.dart';
-import 'book_rating.dart';
+import '../../components/custom_book_image.dart';
+import '../../components/custom_book_rating.dart';
+import '../../constant/style_manger.dart';
+import '../../core/routes/app_routes.dart';
+import '../../models/book_model/book_model.dart';
 
-class BookListViewItem extends StatelessWidget {
-  const BookListViewItem({super.key, required this.bookModel});
+class NewestBookPage extends StatelessWidget {
+  const NewestBookPage({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
@@ -57,10 +57,12 @@ class BookListViewItem extends StatelessWidget {
                           ),
                         ),
                         const Spacer(),
-                        BookRating(
+                        //! Book Rating
+                        CustomBookRating(
                           rating:
-                              bookModel.volumeInfo.averageRating?.round() ?? 0,
-                          count: bookModel.volumeInfo.ratingsCount ?? 0,
+                              bookModel.volumeInfo.averageRating?.round() ??
+                              4.5,
+                          count: bookModel.volumeInfo.ratingsCount ?? 120,
                         ),
                       ],
                     ),

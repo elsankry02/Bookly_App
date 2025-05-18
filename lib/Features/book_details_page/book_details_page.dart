@@ -3,16 +3,16 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
 import '../../models/book_model/book_model.dart';
-import 'book_details_view_body.dart';
+import 'widget/book_details_widget.dart';
 
-class BookDetailsView extends StatefulWidget {
-  const BookDetailsView({super.key, required this.bookModel});
+class BookDetailsPage extends StatefulWidget {
+  const BookDetailsPage({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
-  State<BookDetailsView> createState() => _BookDetailsViewState();
+  State<BookDetailsPage> createState() => _BookDetailsPageState();
 }
 
-class _BookDetailsViewState extends State<BookDetailsView> {
+class _BookDetailsPageState extends State<BookDetailsPage> {
   @override
   void initState() {
     BlocProvider.of<SimilarBooksCubit>(context).getFetchSimilarBooksCubit(
@@ -23,6 +23,6 @@ class _BookDetailsViewState extends State<BookDetailsView> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BookDetailsViewBody(bookModel: widget.bookModel));
+    return Scaffold(body: BookDetailsWidget(bookModel: widget.bookModel));
   }
 }

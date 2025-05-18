@@ -11,8 +11,6 @@ abstract class ColorManger {
   // نص ابيض
   static const kFree = Color(0xff3A3A4D);
 
-  static const kViewAll = Color(0xff7FBFFF);
-
   // static const k = Color(0xffE0E0E0);
   // static const k = Color(0xffE0E0E0);
   // static const k = Color(0xffE0E0E0);
