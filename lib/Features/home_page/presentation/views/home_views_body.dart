@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/custom_app_bar.dart';
-import '../../../../core/utils/string_manger.dart';
-import '../../../../core/utils/style_manger.dart';
+import '../../../../components/custom_app_bar.dart';
+import '../../../../constant/string_manger.dart';
+import '../../../../constant/style_manger.dart';
 import '../widgets/best_seller_list_view.dart';
 import '../widgets/featured_books_list_view.dart';
 

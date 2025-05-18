@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/utils/string_manger.dart';
+import 'package:bookly_app/constant/string_manger.dart';
 import 'package:flutter/material.dart';
 
 class StyleManger {
@@ -14,6 +14,7 @@ class StyleManger {
     fontSize: 18,
     fontWeight: FontWeight.w600,
   );
+
   static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,

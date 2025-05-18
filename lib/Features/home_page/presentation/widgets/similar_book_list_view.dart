@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/components/custom_book_image.dart';
-import '../../../../core/widgets/custom_errors_widget.dart';
-import '../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../../components/custom_book_image.dart';
+import '../../../../components/custom_errors_widget.dart';
+import '../../../../components/custom_loading_indicator.dart';
 import '../../data/manger/similar_books_cubit/similar_books_cubit.dart';
 
 class SimilarBookListView extends StatelessWidget {

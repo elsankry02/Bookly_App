@@ -10,7 +10,7 @@ import '../../Features/search_page/data/manger/get_fetch_search_books_cubit.dart
 import '../../Features/search_page/data/repos/search_repos_impl.dart';
 import '../../Features/search_page/presentation/views/search_views.dart';
 import '../../Features/splash_page/views/splash_view.dart';
-import '../services/services_locator.dart';
+import '../../services/services_locator.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';

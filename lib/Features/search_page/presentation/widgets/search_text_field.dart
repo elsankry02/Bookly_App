@@ -4,8 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../data/manger/get_fetch_search_books_cubit.dart';
 
-class CustomSearchTextField extends StatelessWidget {
-  const CustomSearchTextField({super.key});
+class SearchTextField extends StatelessWidget {
+  const SearchTextField({super.key});
 
   @override
   Widget build(BuildContext context) {

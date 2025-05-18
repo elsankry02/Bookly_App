@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/widgets/custom_errors_widget.dart';
-import '../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../../components/custom_errors_widget.dart';
+import '../../../../components/custom_loading_indicator.dart';
 import '../../data/manger/newest_books_cubit/newest_books_cubit.dart';
 import 'book_list_view_item.dart';
 

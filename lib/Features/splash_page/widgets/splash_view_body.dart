@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/routes/app_routes.dart';
-import '../../../core/utils/image_manger.dart';
+import '../../../constant/image_manger.dart';
 import 'slide_text.dart';
 
 class SplashViewBody extends StatefulWidget {

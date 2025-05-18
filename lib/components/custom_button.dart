@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/style_manger.dart';
+import '../constant/style_manger.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -30,7 +30,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: StyleManger.textStyle18.copyWith(
+          style: StyleManger.textStyle22.copyWith(
             color: textColor,
             fontWeight: FontWeight.w900,
             fontSize: fontSize,

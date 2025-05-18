@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/Function/custom_url_launch.dart';
-import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/Function/open_in_chrome.dart';
+import '../../../../components/custom_button.dart';
 import '../../data/models/book_model/book_model.dart';
 
 class BooksAction extends StatelessWidget {
@@ -24,9 +24,10 @@ class BooksAction extends StatelessWidget {
               text: "Free",
               backgroundColor: Colors.white,
               borderRadius: const BorderRadius.only(
-                bottomLeft: Radius.circular(16),
+                bottomLeft: Radius.circular(22),
               ),
-              textColor: Colors.black,
+              textColor: Color(0xffEF8262),
+              fontSize: 20,
             ),
           ),
           //!
@@ -38,10 +39,10 @@ class BooksAction extends StatelessWidget {
               text: getText(bookModel),
               backgroundColor: const Color(0xffEF8262),
               borderRadius: const BorderRadius.only(
-                topRight: Radius.circular(16),
+                topRight: Radius.circular(22),
               ),
               textColor: Colors.white,
-              fontSize: 16,
+              fontSize: 20,
             ),
           ),
         ],

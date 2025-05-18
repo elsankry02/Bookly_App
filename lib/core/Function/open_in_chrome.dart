@@ -12,7 +12,7 @@ Future<void> openInChrome(BuildContext context, String url) async {
       final intent = AndroidIntent(
         action: 'action_view',
         data: uri.toString(),
-        package: 'com.android.chrome', // محاولة تشغيل الرابط على Chrome
+        package: 'com.android.chrome', //Chrome محاولة تشغيل الرابط على
       );
       await intent.launch();
     } else {

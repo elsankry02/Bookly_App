@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 import '../../../../core/error/failures.dart';
-import '../../../../core/utils/api_service.dart';
+import '../../../../services/api_service.dart';
 import '../../../home_page/data/models/book_model/book_model.dart';
 import 'search_repos.dart';
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
-import '../routes/app_routes.dart';
-import '../utils/image_manger.dart';
+import '../core/routes/app_routes.dart';
+import '../constant/image_manger.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key});

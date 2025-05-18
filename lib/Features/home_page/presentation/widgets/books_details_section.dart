@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/custom_book_image.dart';
-import '../../../../core/utils/style_manger.dart';
+import '../../../../components/custom_book_image.dart';
+import '../../../../constant/style_manger.dart';
 import '../../data/models/book_model/book_model.dart';
 import 'book_rating.dart';
 import 'books_action.dart';

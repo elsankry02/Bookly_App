@@ -1,10 +1,10 @@
-import 'package:bookly_app/core/utils/string_manger.dart';
+import 'package:bookly_app/constant/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/components/custom_book_image.dart';
+import '../../../../components/custom_book_image.dart';
 import '../../../../core/routes/app_routes.dart';
-import '../../../../core/utils/style_manger.dart';
+import '../../../../constant/style_manger.dart';
 import '../../data/models/book_model/book_model.dart';
 import 'book_rating.dart';
 
@@ -25,7 +25,7 @@ class BookListViewItem extends StatelessWidget {
               imageUrl:
                   bookModel.volumeInfo.imageLinks?.thumbnail ?? "Unknown Image",
             ),
-            const SizedBox(width: 30),
+            const SizedBox(width: 15),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +52,7 @@ class BookListViewItem extends StatelessWidget {
                       children: [
                         Text(
                           'Free',
-                          style: StyleManger.textStyle20.copyWith(
+                          style: StyleManger.textStyle14.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),

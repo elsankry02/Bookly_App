@@ -1,10 +1,10 @@
-import '../../../../core/utils/string_manger.dart';
+import '../../../../constant/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/utils/style_manger.dart';
-import '../../../../core/widgets/custom_errors_widget.dart';
-import '../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../../constant/style_manger.dart';
+import '../../../../components/custom_errors_widget.dart';
+import '../../../../components/custom_loading_indicator.dart';
 import '../../../home_page/presentation/widgets/book_list_view_item.dart';
 import '../../data/manger/get_fetch_search_books_cubit.dart';
 

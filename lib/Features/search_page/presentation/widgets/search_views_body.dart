@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
+import 'package:bookly_app/Features/search_page/presentation/widgets/search_text_field.dart';
+import 'package:bookly_app/core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../../core/utils/string_manger.dart';
-import '../../../../core/utils/style_manger.dart';
-import 'custom_search_text_field.dart';
 import 'search_result_list_view.dart';
 
 class SearchViewsBody extends StatelessWidget {
@@ -11,17 +10,23 @@ class SearchViewsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 30),
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomSearchTextField(),
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {
+                  GoRouter.of(context).push(AppRouter.kHomeView);
+                },
+                icon: const Icon(Icons.arrow_back),
+              ),
+              Expanded(child: SearchTextField()),
+            ],
+          ),
           SizedBox(height: 20),
-          //
-          Text(StringManger.kSearchResult, style: StyleManger.textStyle18),
-          SizedBox(height: 20),
-          //
           Expanded(child: SearchResultListView()),
         ],
       ),
