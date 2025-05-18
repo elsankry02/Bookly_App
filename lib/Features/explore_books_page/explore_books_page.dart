@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/explore_books_page/widget/builder_library_widget.dart';
+import 'package:bookly_app/Features/explore_books_page/widget/builder_explore_widget.dart';
 import 'package:bookly_app/bloc/similar_books_cubit/similar_books_cubit.dart';
 import 'package:bookly_app/constant/color_manger.dart';
 import 'package:bookly_app/constant/style_manger.dart';
