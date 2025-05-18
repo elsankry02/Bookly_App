@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/view_all_newset_page/view_all_newset_books.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -16,11 +17,20 @@ abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kDetailseView = '/detailsView';
   static const kSearchView = '/searchView';
+  static const kViewAllNewestBooks = '/viewAllNewestBooks';
 
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashView()),
       GoRoute(path: kHomeView, builder: (context, state) => const HomeView()),
+      GoRoute(
+        path: kViewAllNewestBooks,
+        builder:
+            (context, state) => BlocProvider(
+              create: (context) => SimilarBooksCubit(getIt.get<HomeRepoImp>()),
+              child: ViewAllNewestBooks(),
+            ),
+      ),
       GoRoute(
         path: kDetailseView,
         builder:

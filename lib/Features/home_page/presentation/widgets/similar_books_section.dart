@@ -5,7 +5,8 @@ import '../../../../constant/style_manger.dart';
 import 'similar_book_list_view.dart';
 
 class SimilarBooksSection extends StatelessWidget {
-  const SimilarBooksSection({super.key});
+  const SimilarBooksSection({super.key, required this.category});
+  final String category;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class SimilarBooksSection extends StatelessWidget {
           style: StyleManger.textStyle14.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 16),
-        const SimilarBookListView(),
+        SimilarBookListView(scrollDirectio: Axis.horizontal),
       ],
     );
   }

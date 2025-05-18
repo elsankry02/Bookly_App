@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../core/routes/app_routes.dart';
-
 class CustomBookAppBarDetails extends StatelessWidget {
   const CustomBookAppBarDetails({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -13,7 +10,7 @@ class CustomBookAppBarDetails extends StatelessWidget {
       children: [
         IconButton(
           onPressed: () {
-            GoRouter.of(context).push(AppRouter.kHomeView);
+            context.pop();
           },
           icon: const Icon(Icons.close),
         ),

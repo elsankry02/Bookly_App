@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/routes/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../components/custom_app_bar.dart';
 import '../../../../constant/string_manger.dart';
@@ -31,9 +33,30 @@ class HomeViewBody extends StatelessWidget {
               //
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10),
-                child: Text(
-                  StringManger.kNewestBooks,
-                  style: StyleManger.textStyle30,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      StringManger.kNewestBooks,
+                      style: StyleManger.textStyle30,
+                    ),
+
+                    GestureDetector(
+                      onTap: () {
+                        GoRouter.of(
+                          context,
+                        ).push(AppRouter.kViewAllNewestBooks);
+                      },
+                      child: Text(
+                        'View All',
+                        textDirection: TextDirection.rtl,
+
+                        style: StyleManger.textStyle15.copyWith(
+                          decoration: TextDecoration.underline,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 20),

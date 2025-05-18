@@ -1,3 +1,4 @@
+import 'package:bookly_app/constant/color_manger.dart';
 import 'package:flutter/material.dart';
 
 class CustomLoadingIndicator extends StatelessWidget {
@@ -5,8 +6,8 @@ class CustomLoadingIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: CircularProgressIndicator(color: Color(0xffEF8262)),
+    return Center(
+      child: CircularProgressIndicator(color: ColorManger.kBurntSienna),
     );
   }
 }

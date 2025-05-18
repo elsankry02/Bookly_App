@@ -1,7 +1,8 @@
+import 'package:bookly_app/constant/color_manger.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/Function/open_in_chrome.dart';
 import '../../../../components/custom_button.dart';
+import '../../../../core/Function/open_in_chrome.dart';
 import '../../data/models/book_model/book_model.dart';
 
 class BooksAction extends StatelessWidget {
@@ -26,7 +27,7 @@ class BooksAction extends StatelessWidget {
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(22),
               ),
-              textColor: Color(0xffEF8262),
+              textColor: ColorManger.kBurntSienna,
               fontSize: 20,
             ),
           ),
