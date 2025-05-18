@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
 import '../../models/book_model/book_model.dart';
-import 'widget/book_details_widget.dart';
+import 'book_details_page_view.dart';
 
 class BookDetailsPage extends StatefulWidget {
   const BookDetailsPage({super.key, required this.bookModel});

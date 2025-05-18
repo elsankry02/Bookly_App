@@ -1,12 +1,13 @@
+import 'package:bookly_app/constant/image_manger.dart';
 import 'package:bookly_app/core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
 import '../../components/custom_book_image.dart';
 import '../../components/custom_errors_widget.dart';
 import '../../components/custom_loading_indicator.dart';
-import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
 
 class SimilarBookListView extends StatefulWidget {
   const SimilarBookListView({super.key, required this.scrollDirectio});
@@ -40,7 +41,7 @@ class _SimilarBookListViewState extends State<SimilarBookListView> {
                     child: CustomBookImage(
                       imageUrl:
                           state.books[index].volumeInfo.imageLinks?.thumbnail ??
-                          '',
+                          ImageManger.kBooklyLogo,
                     ),
                   ),
                 );

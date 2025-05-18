@@ -1,13 +1,15 @@
+import 'package:bookly_app/components/custom_rating.dart';
 import 'package:bookly_app/constant/color_manger.dart';
+import 'package:bookly_app/constant/string_manger.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/custom_book_image.dart';
 import '../../../constant/style_manger.dart';
 import '../../../models/book_model/book_model.dart';
-import 'books_action.dart';
+import 'books_action_buttons.dart';
 
-class BooksDetailsSection extends StatelessWidget {
-  const BooksDetailsSection({super.key, required this.bookModel});
+class BookDetailViewWidget extends StatelessWidget {
+  const BookDetailViewWidget({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
@@ -48,15 +50,17 @@ class BooksDetailsSection extends StatelessWidget {
           children: [
             Column(
               children: [
-                Text(
-                  " ${bookModel.volumeInfo.pageCount}",
-
-                  style: StyleManger.textStyle18.copyWith(
-                    color: ColorManger.kWhite,
-                  ),
+                Row(
+                  children: [
+                    CustomRating(
+                      rating:
+                          bookModel.volumeInfo.averageRating?.round() ?? 4.5,
+                    ),
+                  ],
                 ),
+                //! rating
                 Text(
-                  'Pages',
+                  StringManger.krating,
                   textAlign: TextAlign.center,
                   style: StyleManger.textStyle16.copyWith(
                     color: ColorManger.kSecond,
@@ -64,24 +68,37 @@ class BooksDetailsSection extends StatelessWidget {
                 ),
               ],
             ),
+            //! Devider
             Container(
               width: 1.5,
               height: 40,
               color: ColorManger.kSecond,
               margin: const EdgeInsets.symmetric(horizontal: 12),
             ),
-            Opacity(
-              opacity: .5,
-              child: Text(
-                " ${bookModel.volumeInfo.pageCount}",
-                style: StyleManger.textStyle18.copyWith(),
-              ),
+            Column(
+              children: [
+                Text(
+                  " ${bookModel.volumeInfo.pageCount}",
+
+                  style: StyleManger.textStyle18.copyWith(
+                    color: ColorManger.kWhite,
+                  ),
+                ),
+                //! Pages
+                Text(
+                  StringManger.kpages,
+                  textAlign: TextAlign.center,
+                  style: StyleManger.textStyle16.copyWith(
+                    color: ColorManger.kSecond,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
 
         const SizedBox(height: 37),
-        BooksAction(bookModel: bookModel),
+        BookActionButtons(bookModel: bookModel),
       ],
     );
   }

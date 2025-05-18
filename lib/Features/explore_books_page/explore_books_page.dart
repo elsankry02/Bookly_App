@@ -65,8 +65,8 @@ class _ExploreBooksPageState extends State<ExploreBooksPage> {
                       decoration: BoxDecoration(
                         color:
                             currantIndex == index
-                                ? ColorManger.kExploreBooks
-                                : ColorManger.kBurntSienna,
+                                ? ColorManger.kPrimaryColor
+                                : ColorManger.kSecond,
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Center(

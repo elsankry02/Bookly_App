@@ -50,7 +50,7 @@ class HomeViewBody extends StatelessWidget {
                       },
                       //! View All
                       child: Text(
-                        'View All',
+                        StringManger.kViewAll,
                         textDirection: TextDirection.rtl,
 
                         style: StyleManger.textStyle16.copyWith(

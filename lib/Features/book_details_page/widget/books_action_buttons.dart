@@ -1,12 +1,13 @@
 import 'package:bookly_app/constant/color_manger.dart';
+import 'package:bookly_app/constant/string_manger.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/custom_button.dart';
 import '../../../core/Function/open_in_chrome.dart';
 import '../../../models/book_model/book_model.dart';
 
-class BooksAction extends StatelessWidget {
-  const BooksAction({super.key, required this.bookModel});
+class BookActionButtons extends StatelessWidget {
+  const BookActionButtons({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class BooksAction extends StatelessWidget {
                 "${bookModel.saleInfo?.buyLink ?? bookModel.volumeInfo.previewLink}",
               );
             },
-            text: "Free",
+            text: StringManger.kFree,
             backgroundColor: Colors.white,
             borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(25),

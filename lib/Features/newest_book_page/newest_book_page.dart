@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../components/custom_book_image.dart';
-import '../../components/custom_book_rating.dart';
+import '../../components/custom_rating.dart';
 import '../../constant/style_manger.dart';
 import '../../core/routes/app_routes.dart';
 import '../../models/book_model/book_model.dart';
@@ -21,6 +21,7 @@ class NewestBookPage extends StatelessWidget {
         height: 120,
         child: Row(
           children: [
+            //! image
             CustomBookImage(
               imageUrl:
                   bookModel.volumeInfo.imageLinks?.thumbnail ?? "Unknown Image",
@@ -30,6 +31,7 @@ class NewestBookPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  //! Titel
                   Text(
                     bookModel.volumeInfo.title ?? 'No Title',
                     style: StyleManger.textStyle20.copyWith(
@@ -39,30 +41,32 @@ class NewestBookPage extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 3),
+                  //! subTitel
                   Text(
                     (bookModel.volumeInfo.authors != null &&
                             bookModel.volumeInfo.authors!.isNotEmpty)
                         ? bookModel.volumeInfo.authors!.first
                         : 'Unknown Author',
+                    maxLines: 1,
                     style: StyleManger.textStyle14,
                   ),
                   const SizedBox(height: 3),
                   Expanded(
                     child: Row(
                       children: [
+                        //! free
                         Text(
-                          'Free',
+                          StringManger.kFree,
                           style: StyleManger.textStyle14.copyWith(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
                         const Spacer(),
                         //! Book Rating
-                        CustomBookRating(
+                        CustomRating(
                           rating:
                               bookModel.volumeInfo.averageRating?.round() ??
                               4.5,
-                          count: bookModel.volumeInfo.ratingsCount ?? 120,
                         ),
                       ],
                     ),
