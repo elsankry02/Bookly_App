@@ -1,11 +1,11 @@
-import 'constant/color_manger.dart';
-import 'core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'bloc/featured_books_cubit/featured_books_cubit.dart';
 import 'bloc/newest_books_cubit/newest_books_cubit.dart';
+import 'constant/color_manger.dart';
+import 'core/routes/app_routes.dart';
 import 'repos/repo_imp.dart';
 import 'services/services_locator.dart';
 

@@ -1,8 +1,9 @@
-import 'details_book_widget.dart';
-import '../../../core/routes/app_routes.dart';
-import '../../../models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../core/routes/app_routes.dart';
+import '../../../models/book_model/book_model.dart';
+import 'details_book_widget.dart';
 
 class BooksExplorerWidget extends StatelessWidget {
   const BooksExplorerWidget({super.key, required this.book});
