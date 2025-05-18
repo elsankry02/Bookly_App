@@ -1,7 +1,7 @@
 # Bookly – Your Personal Reading Companion  📚
 
 
-![Image](https://github.com/user-attachments/assets/28de37c0-5557-4094-bff8-1355e7e0b827)
+![Image](https://github.com/user-attachments/assets/79b51259-1203-41e4-a3b5-8c0141481398)
 
 
 ## Description 📄
