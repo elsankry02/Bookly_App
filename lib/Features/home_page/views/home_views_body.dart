@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/routes/app_routes.dart';
+import '../../../core/routes/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

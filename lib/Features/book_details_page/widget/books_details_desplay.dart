@@ -1,5 +1,5 @@
-import 'package:bookly_app/Features/book_details_page/widget/book_details_view.dart';
-import 'package:bookly_app/constant/color_manger.dart';
+import 'book_details_view.dart';
+import '../../../constant/color_manger.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/custom_book_image.dart';

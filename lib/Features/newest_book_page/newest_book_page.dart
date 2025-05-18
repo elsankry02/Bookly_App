@@ -1,4 +1,4 @@
-import 'package:bookly_app/constant/string_manger.dart';
+import '../../constant/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

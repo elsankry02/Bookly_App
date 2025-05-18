@@ -1,9 +1,9 @@
-import 'package:bookly_app/Features/explore_books_page/widget/builder_explore_widget.dart';
-import 'package:bookly_app/bloc/similar_books_cubit/similar_books_cubit.dart';
-import 'package:bookly_app/constant/color_manger.dart';
-import 'package:bookly_app/constant/style_manger.dart';
-import 'package:bookly_app/repos/repo_imp.dart';
-import 'package:bookly_app/services/services_locator.dart';
+import 'widget/builder_explore_widget.dart';
+import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
+import '../../constant/color_manger.dart';
+import '../../constant/style_manger.dart';
+import '../../repos/repo_imp.dart';
+import '../../services/services_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

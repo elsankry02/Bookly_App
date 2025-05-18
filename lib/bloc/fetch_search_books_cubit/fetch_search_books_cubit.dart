@@ -1,4 +1,4 @@
-import 'package:bookly_app/repos/repo.dart';
+import '../../repos/repo.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

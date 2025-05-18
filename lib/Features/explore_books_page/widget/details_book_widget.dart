@@ -1,8 +1,8 @@
-import 'package:bookly_app/components/custom_book_image.dart';
-import 'package:bookly_app/components/custom_rating.dart';
-import 'package:bookly_app/constant/string_manger.dart';
-import 'package:bookly_app/constant/style_manger.dart';
-import 'package:bookly_app/models/book_model/book_model.dart';
+import '../../../components/custom_book_image.dart';
+import '../../../components/custom_rating.dart';
+import '../../../constant/string_manger.dart';
+import '../../../constant/style_manger.dart';
+import '../../../models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailsBookWidget extends StatelessWidget {

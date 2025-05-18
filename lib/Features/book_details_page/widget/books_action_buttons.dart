@@ -1,5 +1,5 @@
-import 'package:bookly_app/constant/color_manger.dart';
-import 'package:bookly_app/constant/string_manger.dart';
+import '../../../constant/color_manger.dart';
+import '../../../constant/string_manger.dart';
 import 'package:flutter/material.dart';
 
 import '../../../components/custom_button.dart';

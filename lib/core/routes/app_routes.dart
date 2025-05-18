@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/explore_books_page/explore_books_page.dart';
+import '../../Features/explore_books_page/explore_books_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

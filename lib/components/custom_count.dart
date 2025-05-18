@@ -1,4 +1,4 @@
-import 'package:bookly_app/constant/style_manger.dart';
+import '../constant/style_manger.dart';
 import 'package:flutter/material.dart';
 
 class CustomCount extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:bookly_app/constant/string_manger.dart';
+import 'string_manger.dart';
 import 'package:flutter/material.dart';
 
 class StyleManger {
