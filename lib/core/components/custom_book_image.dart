@@ -1,6 +1,7 @@
-import 'custom_loading_indicator.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+
+import 'custom_loading_indicator.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({super.key, required this.imageUrl});
@@ -12,8 +13,8 @@ class CustomBookImage extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
         child: CachedNetworkImage(
-          fit: BoxFit.fill,
           imageUrl: imageUrl,
+          fit: BoxFit.fill,
           placeholder:
               (context, url) => Center(child: CustomLoadingIndicator()),
           errorWidget: (context, url, error) => const Icon(Icons.error),

@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 
-import '../core/error/failures.dart';
+import '../../core/error/failures.dart';
 import '../models/book_model/book_model.dart';
 
 abstract class Repo {

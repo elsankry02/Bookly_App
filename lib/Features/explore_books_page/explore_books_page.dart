@@ -1,11 +1,12 @@
-import 'widget/builder_explore_widget.dart';
-import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
-import '../../constant/color_manger.dart';
-import '../../constant/style_manger.dart';
-import '../../repos/repo_imp.dart';
-import '../../services/services_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../core/constant/color_manger.dart';
+import '../../core/constant/style_manger.dart';
+import '../../data/services/services_locator.dart';
+import '../../data/bloc/similar_books_cubit/similar_books_cubit.dart';
+import '../../data/repos/repo_imp.dart';
+import 'widget/builder_explore_widget.dart';
 
 class ExploreBooksPage extends StatefulWidget {
   const ExploreBooksPage({super.key});
@@ -41,27 +42,25 @@ class _ExploreBooksPageState extends State<ExploreBooksPage> {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
-                      setState(() {
-                        if (currantIndex != index) {
-                          setState(() {
-                            currantIndex = index;
-                          });
+                      if (currantIndex != index) {
+                        setState(() {
+                          currantIndex = index;
                           context
                               .read<SimilarBooksCubit>()
                               .getFetchSimilarBooksCubit(
                                 category: items[index],
                               );
-                        }
-                      });
+                        });
+                      }
                     },
                     child: Container(
-                      margin: const EdgeInsets.only(right: 15),
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-
+                      margin: const EdgeInsets.only(right: 15),
                       decoration: BoxDecoration(
+                        //! Color
                         color:
                             currantIndex == index
-                                ? ColorManger.kExploreBooks
+                                ? ColorManger.kPreview
                                 : ColorManger.kWhite,
                         borderRadius: BorderRadius.circular(15),
                       ),

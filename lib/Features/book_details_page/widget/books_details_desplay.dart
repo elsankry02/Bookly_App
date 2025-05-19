@@ -1,10 +1,10 @@
-import 'book_details_view.dart';
-import '../../../constant/color_manger.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/custom_book_image.dart';
-import '../../../constant/style_manger.dart';
-import '../../../models/book_model/book_model.dart';
+import '../../../core/components/custom_book_image.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/constant/style_manger.dart';
+import '../../../data/models/book_model/book_model.dart';
+import 'book_details_view.dart';
 import 'books_action_buttons.dart';
 
 class BookDetailsDisplay extends StatelessWidget {

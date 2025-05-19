@@ -32,6 +32,7 @@ Future<void> openInChrome(BuildContext context, String url) async {
   }
 }
 
+//! func ShowSnakBar
 void showError(BuildContext context, {required String message}) {
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
 }

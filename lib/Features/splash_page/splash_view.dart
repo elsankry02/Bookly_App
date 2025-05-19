@@ -1,17 +1,18 @@
-import '../widgets/slide_text.dart';
-import '../../../constant/image_manger.dart';
-import '../../../core/routes/app_routes.dart';
+import 'package:bookly_app/core/constant/image_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class SplashView extends StatefulWidget {
-  const SplashView({super.key});
+import '../../core/routes/app_routes.dart';
+import 'widgets/slide_text.dart';
+
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
   @override
-  State<SplashView> createState() => _SplashViewState();
+  State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
+class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
   @override
@@ -29,14 +30,16 @@ class _SplashViewState extends State<SplashView> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Image.asset(ImageManger.kBooklyLogo),
-        const SizedBox(height: 4),
-        SlideText(slidingAnimation: slidingAnimation),
-      ],
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Image.asset(ImageManger.kBooklyLogo),
+          const SizedBox(height: 4),
+          SlideText(slidingAnimation: slidingAnimation),
+        ],
+      ),
     );
   }
 

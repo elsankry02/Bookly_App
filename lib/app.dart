@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'bloc/featured_books_cubit/featured_books_cubit.dart';
-import 'bloc/newest_books_cubit/newest_books_cubit.dart';
-import 'constant/color_manger.dart';
+import 'core/constant/color_manger.dart';
 import 'core/routes/app_routes.dart';
-import 'repos/repo_imp.dart';
-import 'services/services_locator.dart';
+import 'data/services/services_locator.dart';
+import 'data/bloc/featured_books_cubit/featured_books_cubit.dart';
+import 'data/bloc/newest_books_cubit/newest_books_cubit.dart';
+import 'data/repos/repo_imp.dart';
 
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});

@@ -1,5 +1,6 @@
-import '../constant/style_manger.dart';
 import 'package:flutter/material.dart';
+
+import '../constant/style_manger.dart';
 
 class CustomCount extends StatelessWidget {
   const CustomCount({super.key, required this.count});

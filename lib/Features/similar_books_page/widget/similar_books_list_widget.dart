@@ -1,22 +1,22 @@
-import '../../constant/image_manger.dart';
-import '../../core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../bloc/similar_books_cubit/similar_books_cubit.dart';
-import '../../components/custom_book_image.dart';
-import '../../components/custom_errors_widget.dart';
-import '../../components/custom_loading_indicator.dart';
+import '../../../core/components/custom_book_image.dart';
+import '../../../core/components/custom_errors_widget.dart';
+import '../../../core/components/custom_loading_indicator.dart';
+import '../../../core/constant/image_manger.dart';
+import '../../../core/routes/app_routes.dart';
+import '../../../data/bloc/similar_books_cubit/similar_books_cubit.dart';
 
-class SimilarBookListView extends StatefulWidget {
-  const SimilarBookListView({super.key, required this.scrollDirectio});
+class SimilarBooksListWidget extends StatefulWidget {
+  const SimilarBooksListWidget({super.key, required this.scrollDirectio});
   final Axis scrollDirectio;
   @override
-  State<SimilarBookListView> createState() => _SimilarBookListViewState();
+  State<SimilarBooksListWidget> createState() => _SimilarBooksListWidgetState();
 }
 
-class _SimilarBookListViewState extends State<SimilarBookListView> {
+class _SimilarBooksListWidgetState extends State<SimilarBooksListWidget> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<SimilarBooksCubit, SimilarBooksState>(
@@ -25,20 +25,22 @@ class _SimilarBookListViewState extends State<SimilarBookListView> {
           return SizedBox(
             height: MediaQuery.of(context).size.height * .15,
             child: ListView.builder(
-              itemCount: state.books.length,
               physics: const BouncingScrollPhysics(),
               scrollDirection: widget.scrollDirectio,
+              itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: GestureDetector(
                     onTap: () {
+                      //! Navigate
                       GoRouter.of(context).push(
                         AppRouter.kDetailseView,
                         extra: state.books[index],
                       );
                     },
                     child: CustomBookImage(
+                      //! image
                       imageUrl:
                           state.books[index].volumeInfo.imageLinks?.thumbnail ??
                           ImageManger.kBooklyLogo,

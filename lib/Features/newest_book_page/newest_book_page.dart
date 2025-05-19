@@ -1,19 +1,19 @@
-import '../../constant/string_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../components/custom_book_image.dart';
-import '../../components/custom_rating.dart';
-import '../../constant/style_manger.dart';
+import '../../core/components/custom_book_image.dart';
+import '../../core/components/custom_rating.dart';
+import '../../core/constant/string_manger.dart';
+import '../../core/constant/style_manger.dart';
 import '../../core/routes/app_routes.dart';
-import '../../models/book_model/book_model.dart';
+import '../../data/models/book_model/book_model.dart';
 
 class NewestBookPage extends StatelessWidget {
   const NewestBookPage({super.key, required this.bookModel});
   final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         GoRouter.of(context).push(AppRouter.kDetailseView, extra: bookModel);
       },

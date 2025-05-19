@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../core/routes/app_routes.dart';
-import '../../../models/book_model/book_model.dart';
+import '../../../data/models/book_model/book_model.dart';
 import 'details_book_widget.dart';
 
 class BooksExplorerWidget extends StatelessWidget {
@@ -14,7 +14,7 @@ class BooksExplorerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
-      child: GestureDetector(
+      child: InkWell(
         onTap: () {
           GoRouter.of(context).push(AppRouter.kDetailseView, extra: book);
         },

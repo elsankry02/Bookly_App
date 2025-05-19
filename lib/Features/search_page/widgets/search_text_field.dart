@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../bloc/fetch_search_books_cubit/fetch_search_books_cubit.dart';
+import '../../../data/bloc/fetch_search_books_cubit/fetch_search_books_cubit.dart';
 
 class SearchTextField extends StatelessWidget {
   const SearchTextField({super.key});
@@ -12,9 +12,9 @@ class SearchTextField extends StatelessWidget {
     return TextField(
       cursorColor: Colors.white,
       onSubmitted: (value) {
-        BlocProvider.of<FetchSearchBookCubit>(
-          context,
-        ).getFetchSimilarBooksCubit(endPoint: value);
+        context.read<FetchSearchBookCubit>().getFetchSimilarBooksCubit(
+          endPoint: value,
+        );
       },
       decoration: InputDecoration(
         focusedBorder: buildOutlineInputBroder(),

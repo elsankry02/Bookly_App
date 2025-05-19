@@ -1,10 +1,10 @@
-import '../../../constant/color_manger.dart';
-import '../../../constant/string_manger.dart';
 import 'package:flutter/material.dart';
 
-import '../../../components/custom_button.dart';
 import '../../../core/Function/open_in_chrome.dart';
-import '../../../models/book_model/book_model.dart';
+import '../../../core/components/custom_button.dart';
+import '../../../core/constant/color_manger.dart';
+import '../../../core/constant/string_manger.dart';
+import '../../../data/models/book_model/book_model.dart';
 
 class BookActionButtons extends StatelessWidget {
   const BookActionButtons({super.key, required this.bookModel});
@@ -23,13 +23,13 @@ class BookActionButtons extends StatelessWidget {
                 "${bookModel.saleInfo?.buyLink ?? bookModel.volumeInfo.previewLink}",
               );
             },
-            text: StringManger.kFree,
+            titel: StringManger.kFree,
             backgroundColor: Colors.white,
             borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(25),
             ),
-            textColor: ColorManger.kFree,
-            fontSize: 20,
+            titelColor: ColorManger.kFree,
+            titelFontSize: 20,
           ),
         ),
         //! Preview
@@ -39,13 +39,13 @@ class BookActionButtons extends StatelessWidget {
               // openInChrome
               openInChrome(context, "${bookModel.volumeInfo.previewLink}");
             },
-            text: getText(bookModel),
+            titel: getText(bookModel),
             backgroundColor: ColorManger.kPreview,
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(25),
             ),
-            textColor: Colors.white,
-            fontSize: 20,
+            titelColor: Colors.white,
+            titelFontSize: 20,
           ),
         ),
       ],

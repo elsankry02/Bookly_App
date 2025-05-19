@@ -1,9 +1,10 @@
-import '../../../components/custom_book_image.dart';
-import '../../../components/custom_rating.dart';
-import '../../../constant/string_manger.dart';
-import '../../../constant/style_manger.dart';
-import '../../../models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
+
+import '../../../core/components/custom_book_image.dart';
+import '../../../core/components/custom_rating.dart';
+import '../../../core/constant/string_manger.dart';
+import '../../../core/constant/style_manger.dart';
+import '../../../data/models/book_model/book_model.dart';
 
 class DetailsBookWidget extends StatelessWidget {
   const DetailsBookWidget({super.key, required this.bookModel});
@@ -14,8 +15,8 @@ class DetailsBookWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        //! image
         CustomBookImage(
+          //! image
           imageUrl:
               bookModel.volumeInfo.imageLinks?.thumbnail ?? "Unknown Image",
         ),
@@ -26,22 +27,22 @@ class DetailsBookWidget extends StatelessWidget {
             children: [
               //! titel
               Text(
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 bookModel.volumeInfo.title ?? 'No Title',
                 style: StyleManger.textStyle20.copyWith(
                   fontFamily: StringManger.kGtSectraFine,
                 ),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 3),
               //! subTitel
               Text(
+                maxLines: 2,
+                style: StyleManger.textStyle14,
                 (bookModel.volumeInfo.authors != null &&
                         bookModel.volumeInfo.authors!.isNotEmpty)
                     ? bookModel.volumeInfo.authors!.first
                     : 'Unknown Author',
-                maxLines: 2,
-                style: StyleManger.textStyle14,
               ),
               const SizedBox(height: 3),
               Expanded(
