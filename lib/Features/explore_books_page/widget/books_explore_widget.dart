@@ -15,6 +15,7 @@ class BooksExplorerWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: InkWell(
+        borderRadius: BorderRadius.circular(18),
         onTap: () {
           GoRouter.of(context).push(AppRouter.kDetailseView, extra: book);
         },
