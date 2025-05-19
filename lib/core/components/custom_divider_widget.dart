@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/constant/color_manger.dart';
+import '../constant/color_manger.dart';
 import 'package:flutter/material.dart';
 
 class CustomDividerWidget extends StatelessWidget {

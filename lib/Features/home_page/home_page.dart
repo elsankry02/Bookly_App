@@ -1,11 +1,12 @@
-import 'package:bookly_app/Features/home_page/widgets/best_seller_list_view.dart';
-import 'package:bookly_app/Features/home_page/widgets/featured_books_list_view.dart';
-import 'package:bookly_app/core/components/custom_app_bar.dart';
-import 'package:bookly_app/core/constant/string_manger.dart';
-import 'package:bookly_app/core/constant/style_manger.dart';
-import 'package:bookly_app/core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../core/components/custom_app_bar.dart';
+import '../../core/constant/string_manger.dart';
+import '../../core/constant/style_manger.dart';
+import '../../core/routes/app_routes.dart';
+import 'widgets/best_seller_list_view.dart';
+import 'widgets/featured_books_list_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -39,7 +40,8 @@ class HomePage extends StatelessWidget {
                           StringManger.kNewestBooks,
                           style: StyleManger.textStyle30,
                         ),
-                        GestureDetector(
+                        InkWell(
+                          borderRadius: BorderRadius.circular(3),
                           onTap: () {
                             GoRouter.of(
                               context,
@@ -50,6 +52,8 @@ class HomePage extends StatelessWidget {
                             StringManger.kViewAll,
                             textDirection: TextDirection.rtl,
                             style: StyleManger.textStyle16.copyWith(
+                              fontWeight: FontWeight.w900,
+                              fontFamily: StringManger.kGtSectraFine,
                               decoration: TextDecoration.underline,
                             ),
                           ),

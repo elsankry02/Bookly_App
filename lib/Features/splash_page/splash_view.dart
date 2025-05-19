@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/constant/image_manger.dart';
+import '../../core/constant/image_manger.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

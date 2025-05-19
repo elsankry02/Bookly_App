@@ -14,6 +14,7 @@ class NewestBookPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      borderRadius: BorderRadius.circular(18),
       onTap: () {
         GoRouter.of(context).push(AppRouter.kDetailseView, extra: bookModel);
       },
@@ -50,9 +51,10 @@ class NewestBookPage extends StatelessWidget {
                     maxLines: 1,
                     style: StyleManger.textStyle14,
                   ),
-                  const SizedBox(height: 3),
+                  Spacer(),
                   Expanded(
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         //! free
                         Text(
@@ -61,7 +63,6 @@ class NewestBookPage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        const Spacer(),
                         //! Book Rating
                         CustomRating(
                           averageRating:

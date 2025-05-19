@@ -1,7 +1,7 @@
-import 'package:bookly_app/Features/book_details_page/book_details_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../Features/book_details_page/book_details_page.dart';
 import '../../Features/explore_books_page/explore_books_page.dart';
 import '../../Features/home_page/home_page.dart';
 import '../../Features/search_page/search_page.dart';

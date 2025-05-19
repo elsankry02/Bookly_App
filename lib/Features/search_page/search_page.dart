@@ -1,6 +1,6 @@
-import 'package:bookly_app/Features/search_page/widgets/search_result_display.dart';
-import 'package:bookly_app/Features/search_page/widgets/search_text_field.dart';
-import 'package:bookly_app/core/routes/app_routes.dart';
+import 'widgets/search_result_display.dart';
+import 'widgets/search_text_field.dart';
+import '../../core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

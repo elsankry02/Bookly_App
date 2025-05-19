@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/components/custom_divider_widget.dart';
+import '../../../core/components/custom_divider_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/components/custom_average_rating.dart';
