@@ -33,6 +33,7 @@ class FeaturedBooksListView extends StatelessWidget {
                       );
                     },
                     child: CustomBookImage(
+                      //! image
                       imageUrl:
                           state.books[index].volumeInfo.imageLinks!.thumbnail,
                     ),
