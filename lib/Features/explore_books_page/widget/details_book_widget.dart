@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/components/custom_average_rating.dart';
 import '../../../core/components/custom_book_image.dart';
-import '../../../core/components/custom_rating.dart';
 import '../../../core/constant/string_manger.dart';
 import '../../../core/constant/style_manger.dart';
 import '../../../data/models/book_model/book_model.dart';
@@ -56,9 +56,9 @@ class DetailsBookWidget extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    //! rating
+                    //! averageRating
                     CustomRating(
-                      rating:
+                      averageRating:
                           bookModel.volumeInfo.averageRating?.round() ?? 4.5,
                     ),
                   ],

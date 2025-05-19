@@ -1,8 +1,8 @@
 import 'package:bookly_app/core/components/custom_divider_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/components/custom_count.dart';
-import '../../../core/components/custom_rating.dart';
+import '../../../core/components/custom_average_rating.dart';
+import '../../../core/components/custom_ratings_count.dart';
 import '../../../core/constant/color_manger.dart';
 import '../../../core/constant/string_manger.dart';
 import '../../../core/constant/style_manger.dart';
@@ -24,7 +24,8 @@ class BookDetailsView extends StatelessWidget {
               children: [
                 //! Rating
                 CustomRating(
-                  rating: bookModel.volumeInfo.averageRating?.round() ?? 4.5,
+                  averageRating:
+                      bookModel.volumeInfo.averageRating?.round() ?? 4.5,
                 ),
               ],
             ),
@@ -53,9 +54,10 @@ class BookDetailsView extends StatelessWidget {
           children: [
             Row(
               children: [
-                //! Count
+                //! ratingsCount
                 CustomCount(
-                  count: bookModel.volumeInfo.ratingsCount?.round() ?? 120,
+                  ratingsCount:
+                      bookModel.volumeInfo.ratingsCount?.round() ?? 120,
                 ),
               ],
             ),

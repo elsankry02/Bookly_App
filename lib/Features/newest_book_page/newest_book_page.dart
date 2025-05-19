@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../core/components/custom_average_rating.dart';
 import '../../core/components/custom_book_image.dart';
-import '../../core/components/custom_rating.dart';
 import '../../core/constant/string_manger.dart';
 import '../../core/constant/style_manger.dart';
 import '../../core/routes/app_routes.dart';
@@ -64,7 +64,7 @@ class NewestBookPage extends StatelessWidget {
                         const Spacer(),
                         //! Book Rating
                         CustomRating(
-                          rating:
+                          averageRating:
                               bookModel.volumeInfo.averageRating?.round() ??
                               4.5,
                         ),
