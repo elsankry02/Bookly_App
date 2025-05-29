@@ -1,16 +1,16 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../Features/book_details_page/book_details_page.dart';
-import '../../Features/explore_books_page/explore_books_page.dart';
-import '../../Features/home_page/home_page.dart';
-import '../../Features/search_page/search_page.dart';
-import '../../Features/splash_page/splash_view.dart';
-import '../../data/bloc/fetch_search_books_cubit/fetch_search_books_cubit.dart';
-import '../../data/bloc/similar_books_cubit/similar_books_cubit.dart';
-import '../../data/models/book_model/book_model.dart';
-import '../../data/repos/repo_imp.dart';
-import '../../data/services/services_locator.dart';
+import '../../Features/book_details_page/presentation/view/book_details_page.dart';
+import '../../Features/explore_books_page/presentation/view/explore_books_page.dart';
+import '../../Features/home_page/presentation/view/home_page.dart';
+import '../../Features/search_page/presentation/view/search_page.dart';
+import '../../Features/splash_page/presentation/view/splash_view.dart';
+import '../../Features/search_page/data/search_cubit/fetch_search_books_cubit.dart';
+import '../../Features/similar_books_page/data/similar_books_cubit/similar_books_cubit.dart';
+import '../../Features/home_page/data/book_model/book_model.dart';
+import '../repos/repo_imp.dart';
+import '../services/services_locator.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';

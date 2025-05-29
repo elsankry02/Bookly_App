@@ -4,10 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'core/constant/color_manger.dart';
 import 'core/routes/app_routes.dart';
-import 'data/services/services_locator.dart';
-import 'data/bloc/featured_books_cubit/featured_books_cubit.dart';
-import 'data/bloc/newest_books_cubit/newest_books_cubit.dart';
-import 'data/repos/repo_imp.dart';
+import 'core/services/services_locator.dart';
+import 'Features/home_page/data/featured_books_cubit/featured_books_cubit.dart';
+import 'Features/newest_book_page/data/newest_books_cubit/newest_books_cubit.dart';
+import 'core/repos/repo_imp.dart';
 
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});
