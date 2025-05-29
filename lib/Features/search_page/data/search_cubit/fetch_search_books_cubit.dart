@@ -1,8 +1,7 @@
+import 'package:bookly_app/core/repos/repo.dart';
+import 'package:bookly_app/features/home_page/data/book_model/book_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../home_page/data/book_model/book_model.dart';
-import '../../../../core/repos/repo.dart';
 
 part 'fetch_search_books_state.dart';
 

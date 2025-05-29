@@ -1,10 +1,9 @@
+import 'package:bookly_app/core/components/custom_errors_widget.dart';
+import 'package:bookly_app/core/components/custom_loading_indicator.dart';
+import 'package:bookly_app/features/explore_books_page/presentation/widget/books_explore_widget.dart';
+import 'package:bookly_app/features/similar_books_page/data/similar_books_cubit/similar_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/components/custom_errors_widget.dart';
-import '../../../../core/components/custom_loading_indicator.dart';
-import '../../../similar_books_page/data/similar_books_cubit/similar_books_cubit.dart';
-import 'books_explore_widget.dart';
 
 class BuilderExploreWidget extends StatelessWidget {
   const BuilderExploreWidget({super.key});

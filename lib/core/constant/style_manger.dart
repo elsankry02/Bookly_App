@@ -1,5 +1,6 @@
-import 'string_manger.dart';
 import 'package:flutter/material.dart';
+
+import 'string_manger.dart';
 
 class StyleManger {
   static const textStyle14 = TextStyle(

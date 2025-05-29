@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 import '../error/failures.dart';
 import '../services/api_service.dart';
-import '../../Features/home_page/data/book_model/book_model.dart';
+import '../../features/home_page/data/book_model/book_model.dart';
 import 'repo.dart';
 
 class RepoImp implements Repo {

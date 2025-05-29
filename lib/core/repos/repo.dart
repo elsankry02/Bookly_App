@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 
+import '../../features/home_page/data/book_model/book_model.dart';
 import '../error/failures.dart';
-import '../../Features/home_page/data/book_model/book_model.dart';
 
 abstract class Repo {
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
