@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:android_intent_plus/android_intent.dart';
 import 'package:flutter/material.dart';
+import 'package:top_snackbar_flutter/custom_snack_bar.dart';
+import 'package:top_snackbar_flutter/top_snack_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<void> openInChrome(BuildContext context, String url) async {
@@ -12,14 +14,14 @@ Future<void> openInChrome(BuildContext context, String url) async {
       final intent = AndroidIntent(
         action: 'action_view',
         data: uri.toString(),
-        package: 'com.android.chrome', //Chrome محاولة تشغيل الرابط على
+        package: 'com.android.chrome',
       );
       await intent.launch();
     } else {
       if (await canLaunchUrl(uri)) {
         await launchUrl(uri, mode: LaunchMode.externalApplication);
       } else {
-        showError(context, message: 'تعذر فتح الرابط');
+        showCustomErrorMessage(context, message: 'تعذر فتح الرابط');
       }
     }
   } catch (e) {
@@ -27,12 +29,11 @@ Future<void> openInChrome(BuildContext context, String url) async {
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     } else {
-      showError(context, message: 'تعذر فتح الرابط');
+      showCustomErrorMessage(context, message: 'تعذر فتح الرابط');
     }
   }
 }
 
-//! func ShowSnakBar
-void showError(BuildContext context, {required String message}) {
-  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+void showCustomErrorMessage(BuildContext context, {required String message}) {
+  showTopSnackBar(Overlay.of(context), CustomSnackBar.error(message: message));
 }

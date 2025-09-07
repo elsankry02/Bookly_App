@@ -1,13 +1,13 @@
+import 'package:bookly_app/Features/data/cubits/featured_books_cubit/featured_books_cubit.dart';
+import 'package:bookly_app/Features/data/cubits/newest_books_cubit/newest_books_cubit.dart';
+import 'package:bookly_app/core/repos/repo_imp.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'Features/data/services/services_locator.dart';
 import 'core/constant/color_manger.dart';
-import 'core/repos/repo_imp.dart';
 import 'core/routes/app_routes.dart';
-import 'core/services/services_locator.dart';
-import 'features/home_page/data/featured_books_cubit/featured_books_cubit.dart';
-import 'features/newest_book_page/data/newest_books_cubit/newest_books_cubit.dart';
 
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});

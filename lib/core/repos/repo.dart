@@ -1,7 +1,6 @@
+import 'package:bookly_app/Features/data/book_model/book_model.dart';
+import 'package:bookly_app/core/error/failures.dart';
 import 'package:dartz/dartz.dart';
-
-import '../../features/home_page/data/book_model/book_model.dart';
-import '../error/failures.dart';
 
 abstract class Repo {
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();

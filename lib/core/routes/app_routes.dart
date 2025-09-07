@@ -1,16 +1,16 @@
+import 'package:bookly_app/Features/data/book_model/book_model.dart';
+import 'package:bookly_app/Features/data/cubits/search_cubit/fetch_search_books_cubit.dart';
+import 'package:bookly_app/Features/data/cubits/similar_books_cubit/similar_books_cubit.dart';
+import 'package:bookly_app/Features/presentation/book_details_page/view/book_details_page.dart';
+import 'package:bookly_app/Features/presentation/explore_books_page/view/explore_books_page.dart';
+import 'package:bookly_app/Features/presentation/home_page/view/home_page.dart';
+import 'package:bookly_app/Features/presentation/search_page/view/search_page.dart';
+import 'package:bookly_app/Features/presentation/splash_page/view/splash_view.dart';
+import 'package:bookly_app/core/repos/repo_imp.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/book_details_page/presentation/view/book_details_page.dart';
-import '../../features/explore_books_page/presentation/view/explore_books_page.dart';
-import '../../features/home_page/presentation/view/home_page.dart';
-import '../../features/search_page/presentation/view/search_page.dart';
-import '../../features/splash_page/presentation/view/splash_view.dart';
-import '../../features/search_page/data/search_cubit/fetch_search_books_cubit.dart';
-import '../../features/similar_books_page/data/similar_books_cubit/similar_books_cubit.dart';
-import '../../features/home_page/data/book_model/book_model.dart';
-import '../repos/repo_imp.dart';
-import '../services/services_locator.dart';
+import '../../Features/data/services/services_locator.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';

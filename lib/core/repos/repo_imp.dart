@@ -1,9 +1,9 @@
+import 'package:bookly_app/Features/data/book_model/book_model.dart';
+import 'package:bookly_app/core/error/failures.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-import '../error/failures.dart';
-import '../services/api_service.dart';
-import '../../features/home_page/data/book_model/book_model.dart';
+import '../../Features/data/services/api_service.dart';
 import 'repo.dart';
 
 class RepoImp implements Repo {
